@@ -15,7 +15,7 @@ public class LibraryTest {
         //Oprettelse af array
         Items[] items = new Items[antal];
 
-        for (int = 0; i < antal; i++) {
+        for (int i = 0; i < antal; i++) {
             System.out.println("\nRegistrer Item #" + (i + 1));
 
             System.out.print("Type (Book, Video): ");
@@ -24,17 +24,17 @@ public class LibraryTest {
             System.out.print("Title: ");
             String title = scanner.nextLine();
 
-            if (type.equals("Book")) {
+            if (type.equals("book")) {
                 items[i] = new Book(title);
-            } else if (type.equals("Video")) {
-                items[i] = new Book(title);
+            } else if (type.equals("video")) {
+                items[i] = new Video(title);
             } else {
                 System.out.println("Ukendt Items");
-                Items[i] = new Items(title);
+                items[i] = new Items(title);
             }
         }
         System.out.println("\nRegistrede Items:");
-        for (Items items : items) {
+        for (Items item : items) {
             System.out.println(items);
         }
 
