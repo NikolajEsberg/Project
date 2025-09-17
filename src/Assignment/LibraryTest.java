@@ -8,11 +8,11 @@ public class LibraryTest {
 
         System.out.println("Velkommen til vores bibliotek!");
 
-        System.out.println("Hvor mange Items vil du gerne registrere? ");
+        System.out.print("Hvor mange Items vil du gerne registrere? ");
         int antal = scanner.nextInt();
-        scanner.nextLine(); //Rydder scanneren
+        scanner.nextLine(); // Rydder scanneren
 
-        //Oprettelse af array
+        // Oprettelse af array
         Items[] items = new Items[antal];
 
         for (int i = 0; i < antal; i++) {
@@ -29,13 +29,14 @@ public class LibraryTest {
             } else if (type.equals("video")) {
                 items[i] = new Video(title);
             } else {
-                System.out.println("Ukendt Items");
+                System.out.println("Ukendt Item - oprettes som generisk Item");
                 items[i] = new Items(title);
             }
         }
-        System.out.println("\nRegistrede Items:");
-        for (Items item : items) {
-            System.out.println(items);
+
+        System.out.println("\nID:Type:Title\n");
+        for (int i = 0; i < items.length; i++) {
+            System.out.println((i + 1) + " " + items[i].getType() + " " + items[i].title);
         }
 
         scanner.close();
