@@ -29,12 +29,16 @@ public class LibraryTest {
             } else if (type.equals("video")) {
                 items[i] = new Video(title);
             } else {
-                System.out.println("Ukendt Item - Opretter alligevel");
+                System.out.println("Ukendt Item - oprettes som generisk Item");
                 items[i] = new Items(title);
             }
         }
 
-        System.out.println("\nID:Type:Title\n");
+        // Print overskrift
+        System.out.println("\nListe af låne Items");
+        System.out.println("--------------------\n");
+
+        // Print listen over items med ID, type og titel
         for (int i = 0; i < items.length; i++) {
             System.out.println((i + 1) + " " + items[i].getType() + " " + items[i].title);
         }
