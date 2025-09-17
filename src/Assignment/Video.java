@@ -1,22 +1,21 @@
 package Assignment;
 
-//Subclass: Video
+/ Subclass: Video
 public class Video extends Items {
 
+    // Kald superklassens konstruktor med titlen
     public Video(String name) {
-        super(title);
-        super(type);
+        super(name);
     }
 
-    //Her overrider vi type, da det er specifikt en video
-    @Override
-    public String type{
-        return "video";
+    // Metode til at returnere typen af item
+    public String getType() {
+        return "Video";
     }
 
     @Override
     public String toString() {
-        return "video" +
-                ": " + title;
+        // Her bruger vi getType() for at få typen med i output
+        return getType() + ": " + title;
     }
 }
