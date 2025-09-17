@@ -36,7 +36,8 @@ public class LibraryTest {
 
         // Print overskrift
         System.out.println("\nListe af låne Items");
-        System.out.println("--------------------\n");
+        System.out.println("__________________\n");
+        System.out.println("\nID\tType\tTitle");
 
         // Print listen over items med ID, type og titel
         for (int i = 0; i < items.length; i++) {
