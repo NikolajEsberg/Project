@@ -1,23 +1,21 @@
 package Assignment;
 
-//Subclass: Book
+// Subclass: Book
 public class Book extends Items {
 
+    // Kald superklassens konstruktor med titlen
     public Book(String name) {
-        super(title);
-        super(type);
+        super(name);
     }
 
-    //Her overrider vi type, da det er specefikt en bog
-    @Override
-    public String type{
-        return "book";
+    // Metode til at returnere typen af item
+    public String getType() {
+        return "Book";
     }
 
     @Override
     public String toString() {
-        return "book" +
-                ": " + title;
+        // Her bruger vi getType() for at få typen med i output
+        return getType() + ": " + title;
     }
 }
-
