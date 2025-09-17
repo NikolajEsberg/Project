@@ -9,7 +9,7 @@ public class Book extends Items {
     }
 
     //Her overrider vi type, da det er specefikt en bog
-    @overide
+    @Override
     public String type{
         return "book";
     }
