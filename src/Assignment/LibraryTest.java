@@ -29,7 +29,7 @@ public class LibraryTest {
             } else if (type.equals("video")) {
                 items[i] = new Video(title);
             } else {
-                System.out.println("Ukendt Item - oprettes som generisk Item");
+                System.out.println("Ukendt Item - Opretter alligevel");
                 items[i] = new Items(title);
             }
         }
