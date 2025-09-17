@@ -15,7 +15,7 @@ public class Video extends Items {
 
     @Override
     public String toString() {
-        // Her bruger vi getType() for at få typen med i output
+        // Her bruges getType() for at få typen med i output
         return getType() + ": " + title;
 
     }
